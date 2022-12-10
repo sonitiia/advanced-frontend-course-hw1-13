@@ -19,7 +19,7 @@ const shoesFloor = Math.floor(shoes);
 console.log("Shoes price rounded to the 'floor':", Math.floor(shoesFloor));
 // сума всіх товарів округлена до сотень
 function roundCeil100(num) {
-  return Math.ceil(num / 100) * 100;
+  return Math.round(num / 100) * 100;
 }
 console.log("Sum rounded to hundreds is:", roundCeil100(sum));
 // чи є сума всіх товарів (округлена в меншу сторону) парним чи непарним числом?
