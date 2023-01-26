@@ -1,4 +1,4 @@
-var N = Number(prompt("Input N:"));
+let N = Number(prompt("Input N:"));
 
 if (Number.isInteger(N)) {
     console.log("N is integer:", N,
@@ -9,7 +9,7 @@ if (Number.isInteger(N)) {
     console.log( "Let's do it an integer number:", N);
 }
 
-var M = Number(prompt("Input M:"));
+let M = Number(prompt("Input M:"));
 
 if (Number.isInteger(M)) {
     console.log("M is integer:", M, "Let's continue!");
@@ -21,22 +21,15 @@ if (Number.isInteger(M)) {
 
 
 const passNumbers = confirm("Do you want to pass the even number?");
-var sum = 0;
-if (passNumbers == true) {
-    for (N; N <= M; N++) {
-        if (N % 2 === 0) { 
+let sum = 0;
+for (N; N <= M; N++) {
+    if (passNumbers == true) {
+        if (N % 2 === 0) {
             continue;
         }
-        console.log(N);
         sum += N;
-        // console.log("Sum is:", sum);
-    }
-}
-else { 
-        for (N; N <= M; N++) {
-            console.log(N);
-            sum += N;
-            // console.log("Sum is:", sum);
+    } else { 
+        sum += N;
     }
 }
 
