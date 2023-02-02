@@ -15,24 +15,19 @@ getModa = (...numbers) => {
     const moda = {};
     let max = 0 || null;
     let count = 0;
-
     for (let i = 0; i < numbers.length; i++) {
         const el = numbers[i];
-
         if (el % 1 != 0) continue;
-
         if (moda[el]) { // el = key, moda[el] = value
             moda[el]++;
         } else {
             moda[el] = 1;
         }
-
         if (count < moda[el]) {
             max = el;
             count = moda[el];
         }
     }
-
     return max;
 }
 
@@ -56,3 +51,25 @@ getAverage = (...numbers) => {
 
 const average = getAverage(2, 2, 2, 0 ,-2);
 console.log(average);
+
+
+getMedian = (...numbers) => {
+    const arr = [];
+    let result;
+    for (let i = 0; i < numbers.length; i++) {
+        const el = numbers[i];
+        if (el % 1 != 0) continue;
+        arr.push(el);
+        const halfLength = arr.length / 2;
+        if (arr.length % 2 != 0) {
+            result = arr[Math.floor(halfLength)];
+        } else { 
+            result = getAverage(arr[halfLength-1], arr[halfLength]);
+        }
+    }
+    return result;
+}
+
+const median = getMedian(1, 2, 3, 4, 1.5);
+// const median = getMedian(1, 2, 3, 4, 5);
+console.log(median);
