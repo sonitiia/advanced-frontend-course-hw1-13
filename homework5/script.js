@@ -19,9 +19,7 @@ getModa = (...numbers) => {
     for (let i = 0; i < numbers.length; i++) {
         const el = numbers[i];
 
-        if (el % 1 != 0) {
-            continue;
-        }
+        if (el % 1 != 0) continue;
 
         if (moda[el]) { // el = key, moda[el] = value
             moda[el]++;
@@ -42,3 +40,19 @@ getModa = (...numbers) => {
 // const moda = getModa(6.4, 6.4);
 const moda = getModa(6.4, 6.4, 3, 0);
 console.log(moda);
+
+
+getAverage = (...numbers) => { 
+    let result = 0;
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        const el = numbers[i];
+        if (el % 1 != 0) continue;
+        sum += el;
+        result = sum / numbers.length;
+    }
+    return result;
+}
+
+const average = getAverage(2, 2, 2, 0 ,-2);
+console.log(average);
