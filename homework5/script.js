@@ -89,3 +89,18 @@ filterEvenNumbers = (...numbers) => {
 const oddNumbers = filterEvenNumbers(1, 2, 3, 4, 1.5, 5, 6);
 // const median = getMedian(1, 2, 3, 4, 5);
 console.log(oddNumbers);
+
+
+countPositiveNumbers = (...numbers) => {
+    let count = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        const el = numbers[i];
+        if (el > 0) {
+            count++;
+        }
+    }
+    return count;
+}
+
+const amountOfPositiveNumbers = countPositiveNumbers(1, -2, 3, -4, -5, 6, 0, 6);
+console.log(amountOfPositiveNumbers);
