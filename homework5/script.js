@@ -73,3 +73,19 @@ getMedian = (...numbers) => {
 const median = getMedian(1, 2, 3, 4, 1.5);
 // const median = getMedian(1, 2, 3, 4, 5);
 console.log(median);
+
+
+filterEvenNumbers = (...numbers) => { 
+    const result = [];
+    for (let i = 0; i < numbers.length; i++) {
+        const el = numbers[i];
+        if (el % 1 != 0) continue;
+        if (el % 2 == 0) continue;
+        result.push(el);
+    }
+    return result;
+}
+
+const oddNumbers = filterEvenNumbers(1, 2, 3, 4, 1.5, 5, 6);
+// const median = getMedian(1, 2, 3, 4, 5);
+console.log(oddNumbers);
