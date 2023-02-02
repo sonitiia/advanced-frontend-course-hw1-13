@@ -104,3 +104,18 @@ countPositiveNumbers = (...numbers) => {
 
 const amountOfPositiveNumbers = countPositiveNumbers(1, -2, 3, -4, -5, 6, 0, 6);
 console.log(amountOfPositiveNumbers);
+
+
+getDividedByFive = (...numbers) => {
+    const arr = []
+    for (let i = 0; i < numbers.length; i++) {
+        const el = numbers[i];
+        if (el % 5 == 0) {
+            arr.push(el);
+        }
+    }
+    return arr;
+}
+
+const dividedByFiveNumbers = getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2, 0);
+console.log(dividedByFiveNumbers);
