@@ -119,3 +119,29 @@ getDividedByFive = (...numbers) => {
 
 const dividedByFiveNumbers = getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2, 0);
 console.log(dividedByFiveNumbers);
+
+
+replaceBadWords = (string) => {
+    string = string.toLowerCase(); //edit to return the original upper/lower case string
+    const badWords = ["shit", "fuck", "anything"];
+    const arrayFromString = string.split(" ");
+    let findBadWord = "";
+    let arr = [];
+    let result = "";
+    for (let i = 0; i < arrayFromString.length; i++) {
+        let el = arrayFromString[i];
+        for (let i = 0; i < badWords.length; i++) {
+            const badWord = badWords[i];
+            findBadWord = el.includes(badWord);
+            if (findBadWord == true) { 
+                el = el.replace(badWord, "*".repeat(badWord.length));
+            }
+        } 
+        arr.push(el);
+        result = arr.join(" ");
+    }
+    return result;
+}
+
+const replaceBadWordsWithAsterisks = replaceBadWords("Are you fucking kidding fucking shit Anything?");
+console.log(replaceBadWordsWithAsterisks);
