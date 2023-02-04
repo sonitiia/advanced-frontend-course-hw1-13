@@ -87,7 +87,6 @@ filterEvenNumbers = (...numbers) => {
 }
 
 const oddNumbers = filterEvenNumbers(1, 2, 3, 4, 1.5, 5, 6);
-// const median = getMedian(1, 2, 3, 4, 5);
 console.log(oddNumbers);
 
 
@@ -158,3 +157,23 @@ divideByThree = (word) => {
 
 const divideWordByThree = divideByThree("Comm  anderrr");
 console.log(divideWordByThree);
+
+
+generatePermutations = (word) => {
+    word = word.toLowerCase().replace(/\s+/g, '');
+    if (!!word.length && word.length < 2) return word;
+    const result = [];
+    for (let i = 0; i < word.length; i++) {
+        const el = word[i];
+        if (word.indexOf(el) != i) continue;
+        let remainder = word.slice(0, i) + word.slice(i + 1, word.length);
+        console.log(remainder);
+        for (let permutation of generatePermutations(remainder)) {
+            result.push(el + permutation);       
+        }
+    }
+    return result;
+}
+
+const genPerm = generatePermutations("man");
+console.log(genPerm);
