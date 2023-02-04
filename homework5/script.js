@@ -122,7 +122,7 @@ console.log(dividedByFiveNumbers);
 
 
 replaceBadWords = (string) => {
-    string = string.toLowerCase(); //edit to return the original upper/lower case string
+    // string = string.toLowerCase();
     const badWords = ["shit", "fuck", "anything"];
     const arrayFromString = string.split(" ");
     let findBadWord = "";
@@ -145,3 +145,16 @@ replaceBadWords = (string) => {
 
 const replaceBadWordsWithAsterisks = replaceBadWords("Are you fucking kidding fucking shit Anything?");
 console.log(replaceBadWordsWithAsterisks);
+
+
+divideByThree = (word) => {
+    word = word.toLowerCase().replace(/\s+/g, '');
+    let res = word.split("");
+    const result = new Array(Math.ceil(res.length / 3))
+        .fill([])
+        .map(() => res.splice(0, 3).join(""))
+    return result;
+}
+
+const divideWordByThree = divideByThree("Comm  anderrr");
+console.log(divideWordByThree);
