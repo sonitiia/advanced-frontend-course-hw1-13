@@ -67,6 +67,19 @@ console.log(averageMark);
 
 
 ///////////
+const getStudentInfo = (obj) => { 
+    const student = {};
+    student.course = obj.course;
+    student.name = obj.name;
+    student.averageMark = getAverageMark(obj);
+    return student;
+}
+
+const studentInfo = getStudentInfo(students[2]);
+console.log(studentInfo);
+
+
+///////////
 const getStudentsNames = (arr) => { 
     let names = [];
     for (let i = 0; i < arr.length; i++) {
@@ -80,3 +93,28 @@ const getStudentsNames = (arr) => {
 const studentsNames = getStudentsNames(students);
 console.log(studentsNames);
 
+
+///////////
+// const getBestStudent = (arr) => {
+    // let maxAverageMark = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     let averageMark = getAverageMark(arr[i]);
+    //     maxAverageMark = Math.max(averageMark);
+    //     console.log(arr[i].name);
+    // }
+    // for (const iterator of object) {
+        
+    // }
+    // for (const key in arr) {
+    //     const subjectMarks = arr[key];
+    //     arr = arr.concat(subjectMarks);
+    //     console.log(arr);
+    // }
+    // const average = +getAverage(...arr).toFixed(2);
+    // return average;
+
+    // return maxAverageMark;
+// }
+
+// const bestStudent = getBestStudent(students);
+// console.log(bestStudent);
