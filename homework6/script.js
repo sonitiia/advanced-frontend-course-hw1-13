@@ -54,7 +54,10 @@ const getAverage = (...numbers) => {
 
 const getAverageMark = (obj) => { 
     let arr = [];
-    arr = arr.concat(obj.subjects.math, obj.subjects.algorithms, obj.subjects.data_science);
+    for (const key in obj.subjects) {
+        const subjectMarks = obj.subjects[key];
+        arr = arr.concat(subjectMarks);
+    }
     const average = +getAverage(...arr).toFixed(2);
     return average;
 }
