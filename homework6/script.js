@@ -37,3 +37,29 @@ const getSubjects = (obj) => {
 
 const subjectsArray = getSubjects(students[0]);
 console.log(subjectsArray);
+
+
+const getAverage = (...numbers) => { 
+    let result = 0;
+    let sum = 0;
+    for (let i = 0; i < numbers.length; i++) {
+        const el = numbers[i];
+        if (el % 1 != 0) continue;
+        sum += el;
+        result = sum / numbers.length;
+    }
+    return result;
+}
+
+const getAverageMark = (obj) => { 
+    let arr = [];
+    arr = arr.concat(obj.subjects.math, obj.subjects.algorithms, obj.subjects.data_science);
+    const average = +getAverage(...arr).toFixed(2);;
+    return average;
+}
+
+const averageMark = getAverageMark(students[0]);
+console.log(averageMark);
+
+
+
