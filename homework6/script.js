@@ -39,6 +39,7 @@ const subjectsArray = getSubjects(students[0]);
 console.log(subjectsArray);
 
 
+///////////
 const getAverage = (...numbers) => { 
     let result = 0;
     let sum = 0;
@@ -54,7 +55,7 @@ const getAverage = (...numbers) => {
 const getAverageMark = (obj) => { 
     let arr = [];
     arr = arr.concat(obj.subjects.math, obj.subjects.algorithms, obj.subjects.data_science);
-    const average = +getAverage(...arr).toFixed(2);;
+    const average = +getAverage(...arr).toFixed(2);
     return average;
 }
 
@@ -62,4 +63,17 @@ const averageMark = getAverageMark(students[0]);
 console.log(averageMark);
 
 
+///////////
+const getStudentsNames = (arr) => { 
+    let names = [];
+    for (let i = 0; i < arr.length; i++) {
+        const el = arr[i];
+        names.push(el.name);
+        names = names.sort();       
+    }
+    return names;
+}
+
+const studentsNames = getStudentsNames(students);
+console.log(studentsNames);
 
