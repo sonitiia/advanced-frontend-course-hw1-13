@@ -2,7 +2,7 @@ const students = ["Олександр", "Ігор", "Олена", "Іра", "О�
 const themes = ["Диференційне рівняння", "Теорія автоматів", "Алгоритми і структури даних"];
 const marks = [4, 5, 5, 3, 4, 5];
 
-getPairs = (classmates) => {
+const getPairs = (classmates) => {
     const boysArray = [];
     const girlsArray = [];
     for (let i = 0; i < classmates.length; i++) {
@@ -25,7 +25,7 @@ getPairs = (classmates) => {
 const pairs = getPairs(students);
 console.log(pairs);
 
-assignProjects = (pairs, namesOfProjects) => {
+const assignProjects = (pairs, namesOfProjects) => {
     const projects = [];
     for (let i = 0; i < pairs.length; i++) {
         const pair = pairs[i];
@@ -38,7 +38,7 @@ assignProjects = (pairs, namesOfProjects) => {
 const projects = assignProjects(pairs, themes);
 console.log(projects);
 
-setMarks = (classmates, marksInOrder) => {
+const setMarks = (classmates, marksInOrder) => {
     const studentsMarks = [];
     for (let i = 0; i < marksInOrder.length; i++) {
         studentMark = [classmates[i], marksInOrder[i]];
