@@ -1,4 +1,4 @@
-getRandomArray = (length, min, max) => { 
+const getRandomArray = (length, min, max) => { 
     const randomArray = [];
     for (let i = 0; i < length; i++) {
         const randomNumber = Math.floor(Math.random() * (max - min) + min);
@@ -11,7 +11,7 @@ const randomArray = getRandomArray(8, 1, 100);
 console.log(randomArray);
 
 
-getModa = (...numbers) => {
+const getModa = (...numbers) => {
     const moda = {};
     let max = 0 || null;
     let count = 0;
@@ -37,7 +37,7 @@ const moda = getModa(6.4, 6.4, 3, 0);
 console.log(moda);
 
 
-getAverage = (...numbers) => { 
+const getAverage = (...numbers) => { 
     let result = 0;
     let sum = 0;
     for (let i = 0; i < numbers.length; i++) {
@@ -53,7 +53,7 @@ const average = getAverage(2, 2, 2, 0 ,-2);
 console.log(average);
 
 
-getMedian = (...numbers) => {
+const getMedian = (...numbers) => {
     const arr = [];
     let result;
     for (let i = 0; i < numbers.length; i++) {
@@ -75,7 +75,7 @@ const median = getMedian(1, 2, 3, 4, 1.5);
 console.log(median);
 
 
-filterEvenNumbers = (...numbers) => { 
+const filterEvenNumbers = (...numbers) => { 
     const result = [];
     for (let i = 0; i < numbers.length; i++) {
         const el = numbers[i];
@@ -90,7 +90,7 @@ const oddNumbers = filterEvenNumbers(1, 2, 3, 4, 1.5, 5, 6);
 console.log(oddNumbers);
 
 
-countPositiveNumbers = (...numbers) => {
+const countPositiveNumbers = (...numbers) => {
     let count = 0;
     for (let i = 0; i < numbers.length; i++) {
         const el = numbers[i];
@@ -105,7 +105,7 @@ const amountOfPositiveNumbers = countPositiveNumbers(1, -2, 3, -4, -5, 6, 0, 6);
 console.log(amountOfPositiveNumbers);
 
 
-getDividedByFive = (...numbers) => {
+const getDividedByFive = (...numbers) => {
     const arr = []
     for (let i = 0; i < numbers.length; i++) {
         const el = numbers[i];
@@ -120,7 +120,7 @@ const dividedByFiveNumbers = getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 8
 console.log(dividedByFiveNumbers);
 
 
-replaceBadWords = (string) => {
+const replaceBadWords = (string) => {
     // string = string.toLowerCase();
     const badWords = ["shit", "fuck", "anything"];
     const arrayFromString = string.split(" ");
@@ -146,7 +146,7 @@ const replaceBadWordsWithAsterisks = replaceBadWords("Are you fucking kidding fu
 console.log(replaceBadWordsWithAsterisks);
 
 
-divideByThree = (word) => {
+const divideByThree = (word) => {
     word = word.toLowerCase().replace(/\s+/g, '');
     let res = word.split("");
     const result = new Array(Math.ceil(res.length / 3))
@@ -159,7 +159,7 @@ const divideWordByThree = divideByThree("Comm  anderrr");
 console.log(divideWordByThree);
 
 
-generatePermutations = (word) => {
+const generatePermutations = (word) => {
     word = word.toLowerCase().replace(/\s+/g, '');
     if (!!word.length && word.length < 2) return word;
     const result = [];
