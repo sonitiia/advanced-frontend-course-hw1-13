@@ -23,4 +23,17 @@ const students = [{
         cosmology: [5, 5, 5, 5]
     }
 }];
-console.log(students);
+
+
+const getSubjects = (obj) => {
+    const arr = [];
+    for (let key in obj.subjects) {
+        key = key.replace("_", " ");
+        const keyUpperCase = key.charAt(0).toUpperCase() + key.slice(1);
+        arr.push(keyUpperCase);        
+    }
+    return arr;
+}
+
+const subjectsArray = getSubjects(students[0]);
+console.log(subjectsArray);
