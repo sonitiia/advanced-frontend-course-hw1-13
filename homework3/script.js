@@ -1,4 +1,4 @@
-getMaxDigit = (number) => {
+const getMaxDigit = (number) => {
     if (number == 0) {
         return 0;
     } else {
@@ -7,7 +7,7 @@ getMaxDigit = (number) => {
 }
 
 /////
-loopedMultiply = (base, exp) => {
+const loopedMultiply = (base, exp) => {
     let result = 1;
     for (let i = 0; i < exp; i++) {
         result *= base;
@@ -15,7 +15,7 @@ loopedMultiply = (base, exp) => {
     return result;
 }
 
-powerOfNumber = (base, exp) => {
+const powerOfNumber = (base, exp) => {
     let result = 1;
     if (exp >= 0) {
         result = loopedMultiply(base, exp);
@@ -26,23 +26,23 @@ powerOfNumber = (base, exp) => {
 }
 /////
 
-toUpperCaseFirstLetter = (word) => {
+export const toUpperCaseFirstLetter = (word) => {
     word = word.toLowerCase();
     const finalWord = word.charAt(0).toUpperCase() + word.slice(1);
     return finalWord;
 }
 
-salaryWithTax = (salary) => { 
+const salaryWithTax = (salary) => { 
     const tax = 18 + 1.5;
-    result = salary * (100 - tax) / 100;
+    const result = salary * (100 - tax) / 100;
     return result;
 }
 
-getRandomNumber = (min, max) => {
+const getRandomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-countLetter = (letter, word) => { 
+const countLetter = (letter, word) => { 
     let sum = 0;
     letter = letter.toLowerCase();
     word = word.toLowerCase();
@@ -54,8 +54,9 @@ countLetter = (letter, word) => {
     return sum;
 }
 
-convertCurrency = (money) => { 
-    moneyToConvert = 0;
+const convertCurrency = (money) => { 
+    let moneySymbol = "";
+    let moneyToConvert = 0;
     if (money.endsWith("UAH")) {
         moneyToConvert = money.split(/UAH/);
         moneyToConvert[0] /= 25;
@@ -74,7 +75,7 @@ convertCurrency = (money) => {
     return moneyToConvert[0] + moneySymbol;
 }
 
-getRandomPassword = (number) => {
+const getRandomPassword = (number) => {
     let password = number || 8;
     let randomPassword = '';
     for (let i = 0; i < password; i++) {
@@ -83,14 +84,14 @@ getRandomPassword = (number) => {
     return randomPassword;
 }
 
-deleteLetters = (letter, word) => {
+const deleteLetters = (letter, word) => {
     letter = letter.toLowerCase();
     let wordWithoutLetter = "";
     wordWithoutLetter = word.toLowerCase().replaceAll(`${letter}`, "");
     return wordWithoutLetter;
 }
 
-isPalindrome = (string) => {
+const isPalindrome = (string) => {
     string = string.replace(/\s+/g, '').toLowerCase();
     //  \s is the regex for "whitespace", and g is the "global" flag, meaning match ALL \s(whitespaces)
     for (let i = 0; i < string.length / 2; i++) {
@@ -101,7 +102,7 @@ isPalindrome = (string) => {
     return true;
 }
 
-deleteDuplicateLetter = (string) => {
+const deleteDuplicateLetter = (string) => {
     string = string.toLowerCase();
     let arrayFromString = string.split("");
     let result = [];
