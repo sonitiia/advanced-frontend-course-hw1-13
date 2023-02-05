@@ -41,7 +41,7 @@ console.log(projects);
 const setMarks = (classmates, marksInOrder) => {
     const studentsMarks = [];
     for (let i = 0; i < marksInOrder.length; i++) {
-        studentMark = [classmates[i], marksInOrder[i]];
+        const studentMark = [classmates[i], marksInOrder[i]];
         studentsMarks.push(studentMark);
     }
     return studentsMarks;
