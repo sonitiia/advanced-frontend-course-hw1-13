@@ -26,7 +26,7 @@ const powerOfNumber = (base, exp) => {
 }
 /////
 
-export const toUpperCaseFirstLetter = (word) => {
+const toUpperCaseFirstLetter = (word) => {
     word = word.toLowerCase();
     const finalWord = word.charAt(0).toUpperCase() + word.slice(1);
     return finalWord;
