@@ -110,3 +110,21 @@ const getBestStudent = (arr) => {
 
 const bestStudent = getBestStudent(students);
 console.log(bestStudent);
+
+
+///////////
+const calculateWordLetters = (word) => {
+    let letterCount = {};
+    for (let i = 0; i < word.length; i++) {
+        const letter = word[i];
+        if (letterCount[letter]) {
+            letterCount[letter]++;
+        } else {
+            letterCount[letter] = 1;
+        }
+    }
+    return letterCount;
+}
+
+const wordLetters = calculateWordLetters("тест");
+console.log(wordLetters);
