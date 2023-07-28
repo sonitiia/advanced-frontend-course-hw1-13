@@ -62,7 +62,7 @@ const getAverageMark = (obj) => {
     return average;
 }
 
-const averageMark = getAverageMark(students[0]);
+const averageMark = getAverageMark(students[2]);
 console.log(averageMark);
 
 
@@ -75,7 +75,7 @@ const getStudentInfo = (obj) => {
     return student;
 }
 
-const studentInfo = getStudentInfo(students[2]);
+const studentInfo = getStudentInfo(students[0]);
 console.log(studentInfo);
 
 
@@ -92,29 +92,3 @@ const getStudentsNames = (arr) => {
 
 const studentsNames = getStudentsNames(students);
 console.log(studentsNames);
-
-
-///////////
-// const getBestStudent = (arr) => {
-    // let maxAverageMark = 0;
-    // for (let i = 0; i < arr.length; i++) {
-    //     let averageMark = getAverageMark(arr[i]);
-    //     maxAverageMark = Math.max(averageMark);
-    //     console.log(arr[i].name);
-    // }
-    // for (const iterator of object) {
-        
-    // }
-    // for (const key in arr) {
-    //     const subjectMarks = arr[key];
-    //     arr = arr.concat(subjectMarks);
-    //     console.log(arr);
-    // }
-    // const average = +getAverage(...arr).toFixed(2);
-    // return average;
-
-    // return maxAverageMark;
-// }
-
-// const bestStudent = getBestStudent(students);
-// console.log(bestStudent);
