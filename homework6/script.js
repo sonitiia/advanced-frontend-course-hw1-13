@@ -92,3 +92,21 @@ const getStudentsNames = (arr) => {
 
 const studentsNames = getStudentsNames(students);
 console.log(studentsNames);
+
+
+///////////
+const getBestStudent = (arr) => {
+    let index = 0;
+    let mark = 0;
+    for (let i = 0; i < arr.length; i++) {
+        const student = arr[i];
+        if (getAverageMark(student) > mark) {
+            index = i;
+            mark = getAverageMark(student);
+        }
+    }
+    return arr[index].name;
+}
+
+const bestStudent = getBestStudent(students);
+console.log(bestStudent);
