@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 const randomColor = colors[randomIndex];
                 elements[i].style.backgroundColor = randomColor;
             }, 1000);
-            clearInterval();
         }
     })
 });
