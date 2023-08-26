@@ -1,0 +1,23 @@
+button {
+    color: white;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+}
+
+#generate-blocks-interval {
+    background: blueviolet ;
+}
+
+#generate-blocks {
+    background: black ;
+}
+
+#wrapper {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+    justify-items: stretch;
+    margin-top: 20px;
+}
+
