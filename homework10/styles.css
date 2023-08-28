@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url("assets/sounds.jpg") bottom center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    font-size: 34px;
+    transition: all 0.3s;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    transform: scale(1.1);
+    z-index: 1;
+}
