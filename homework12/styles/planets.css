@@ -1,0 +1,16 @@
+#planet-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.planet-wrapper {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 20px;
+}
+
+.planet-wrapper h3 {
+    color: rgb(23, 28, 134);
+}

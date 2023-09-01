@@ -1,0 +1,65 @@
+#get-info, #next {
+    padding: 10px 20px;
+    background: linear-gradient(290deg, rgb(0, 0, 186), rgb(1, 4, 66));
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#input-number {
+    padding: 8px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border-color: rgb(1, 4, 66);
+    border-style: solid;
+}
+
+#next {
+    background: linear-gradient(290deg, rgb(33, 216, 143), rgb(0, 130, 86));
+}
+
+#characters-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.character-wrapper {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.character-info p {
+    color: rgb(23, 28, 134);
+}
+
+.character-wrapper img {
+    height: 250px;
+    width:auto;
+}
+
+
+@media screen and (max-width: 340px) {
+    .character-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .character-wrapper img {
+        height: auto;
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .character-wrapper img {
+        height: 450px;
+    }
+  }
