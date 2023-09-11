@@ -1,0 +1,37 @@
+.post-wrapper {
+    background-color: #283444;
+    color: white;
+    padding: 2%;
+}
+
+.post-header, .post-additional-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-additional-info {
+    color: gray;
+}
+
+.post-info {
+    margin: 0px 45px;
+}
+
+.post-info img {
+    width: 100%;
+    border-radius: 14px;
+}
+
+.post-content {
+    margin-bottom: 6px;
+}
+
+.post-icons {
+    display: flex;
+    justify-content: space-around;
+    color: gray;
+    margin-top: 6px;
+}
+
+
