@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.2cefbc98.css",
-    "main.js": "/static/js/main.faeae3aa.js",
-    "index.html": "/index.html",
-    "main.2cefbc98.css.map": "/static/css/main.2cefbc98.css.map",
-    "main.faeae3aa.js.map": "/static/js/main.faeae3aa.js.map"
+    "main.css": "/advanced-frontend-course/homework16/static/css/main.2cefbc98.css",
+    "main.js": "/advanced-frontend-course/homework16/static/js/main.faeae3aa.js",
+    "index.html": "/advanced-frontend-course/homework16/index.html",
+    "main.2cefbc98.css.map": "/advanced-frontend-course/homework16/static/css/main.2cefbc98.css.map",
+    "main.faeae3aa.js.map": "/advanced-frontend-course/homework16/static/js/main.faeae3aa.js.map"
   },
   "entrypoints": [
     "static/css/main.2cefbc98.css",
